@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter</title>
+
+    <!-- style link css  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- google font link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- tailwin and daisy ul cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-black">
+    <header>
+
+    </header>
+
+    <main>
+        <!-- search section start here  -->
+        <section id="search-container" class="lg:px-28">
+            <div class="form-control mb-14 flex flex-col justify-center items-center space-y-5">
+                <div>
+                    <label class="label">
+                        <span class="label-text font-extrabold text-3xl text-black">Search your phone</span>
+                    </label>
+                </div>
+                <div class="">
+                    <label class="input-group">
+                        <input id="search-flied" type="text" placeholder="Search your phone"
+                            class="lg:w-96 input input-bordere bg-gray-200" />
+                        <button onclick="handelSearch()" class="btn btn-primary">Search</button>
+                    </label>
+                </div>
+                <div id="loading-spingner" class="hidden">
+                    <span class="loading loading-infinity loading-md mt-10 "></span>
+                </div>
+            </div>
+            <div id="card-container" class="search-card-container grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 p-4">
+                
+            </div>
+            <div id="show-all-btn" class="text-center p-7 hidden">
+                <button onclick="showAll()" class="btn btn-outline btn-accent w-72">Accent</button>
+            </div>
+
+            <div class="text-white">
+                <!-- Open the modal using ID.showModal() method -->
+                <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                    <form method="dialog" class="modal-box">
+
+                        <div id="phone-details" class="card card-compact">
+                            
+                        </div>
+
+                        <div class="modal-action text-center">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn btn-sm bg-orange-400 text-black">Clos</button>
+                        </div>
+                    </form>
+                </dialog>
+            </div>
+        </section>
+
+        <!-- search section end here  -->
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="./js/cardApi.js"></script>
+</body>
+</html>
