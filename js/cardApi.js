@@ -51,6 +51,7 @@ function handelSearch(isShowAll) {
     isloading(true)
     const searchFlied = document.getElementById('search-flied')
     const searchText = searchFlied.value
+    searchFlied.value = ''
     getCardContainer(searchText, isShowAll)
 
 }
